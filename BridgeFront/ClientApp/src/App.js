@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Container } from 'reactstrap';
-import { Home } from './containers/Home';
+import { Acceuil } from './containers/Acceuil';
+import { Recherche } from './containers/Recherche';
 import { FetchData } from './containers/FetchData';
-import { Counter } from './containers/Counter';
 import { NavMenu } from './components/NavMenu';
+
 
 export default class App extends Component {
   static displayName = App.name;
@@ -14,8 +15,8 @@ export default class App extends Component {
           <div>
               <NavMenu/>
               <Container>
-                <Route exact path='/' component={Home} />
-                <Route path='/counter' component={Counter} />
+                  <Route exact path='/' component={Acceuil} />
+                  <Route path='/Recherche' component={Recherche} />
                 <Route path='/fetch-data' component={FetchData} />
               </Container>
           </div>
