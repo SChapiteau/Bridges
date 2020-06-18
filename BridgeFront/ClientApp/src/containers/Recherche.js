@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import { EntrepriseListItem } from '../components/Entreprise/EntrepriseListItem';
 
 export class Recherche extends Component {
     static displayName = Recherche.name;
-
-    
 
     constructor(props) {
         super(props);
@@ -21,11 +20,11 @@ export class Recherche extends Component {
     }
 
     rechercher(event) {
-        alert('Le nom a été soumis : ' + this.state.NomEntreprise);
+        //alert('Le nom a été soumis : ' + this.state.NomEntreprise);
         this.setState({
-            items: ["item1", "item2", "item3"
-                //{ "id": 1, "name": "Apples", "price": "$2" },
-                //{ "id": 2, "name": "Peaches", "price": "$5" }
+            items: [
+                { "id": 1, "Nom": "Apples", "SIRET": "1235132" },
+                { "id": 2, "Nom": "Peaches", "SIRET": "15321" }
             ]
         });
         console.log(this.state.items)
@@ -34,10 +33,16 @@ export class Recherche extends Component {
     }
 
     render() {
+         //{this.state.items.map(i => <li>{i.Nom} - {i.SIRET}</li>)}
 
         var resultat;
         if (this.state.items.length > 0) {
-            resultat = <div>resultat de recherche</div>
+            resultat = <div>
+                <p>resultat de recherche</p>
+                <ul>                    
+                    {this.state.items.map(i => <EntrepriseListItem e={i} />)}
+                </ul>
+            </div>
         }
 
 
