@@ -19,8 +19,7 @@ export class Recherche extends Component {
         this.setState({ NomEntreprise: event.target.value });
     }
 
-    rechercher(event) {
-        //alert('Le nom a été soumis : ' + this.state.NomEntreprise);
+    rechercher(event) {        
         this.setState({
             items: [
                 { "id": 1, "Nom": "Apples", "SIRET": "1235132" },
@@ -32,9 +31,7 @@ export class Recherche extends Component {
         event.preventDefault();
     }
 
-    render() {
-         //{this.state.items.map(i => <li>{i.Nom} - {i.SIRET}</li>)}
-
+    render() {         
         var resultat;
         if (this.state.items.length > 0) {
             resultat = <div>
@@ -44,7 +41,6 @@ export class Recherche extends Component {
                 </ul>
             </div>
         }
-
 
         return (
             <div>
