@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BridgeCore\Bridges.Core.csproj" />
+    <ProjectReference Include="..\Bridges.Core\Bridges.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Entreprise]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [Nom] VARCHAR(50) NOT NULL, 
+    [SIRET] VARCHAR(50) NULL
+)
