@@ -14,7 +14,7 @@ export class EntrepriseListItem extends Component {
 
   render () {
       return (
-          <li>Entreprise : {this.props.e.Nom} - {this.props.e.SIRET}</li>
+          <li key={this.props.e.siret} >Entreprise : {this.props.e.nom} - {this.props.e.siret}</li>
     );
   }
 }

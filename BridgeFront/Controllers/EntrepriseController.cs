@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BridgeCore.Entreprise;
+using Bridges.Services;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace BridgeFront.Controllers
 {
@@ -11,11 +14,12 @@ namespace BridgeFront.Controllers
     {
         [HttpGet]
         [Route("GetEntreprise")]
-        public string GetEntreprise()
+        public IEnumerable<Entreprise> GetEntreprise()
         {
-            return @" items: [ { 'id': 1, 'Nom': 'Apples', 'SIRET': '1235132' },
-                { 'id': 2, 'Nom': 'Peaches', 'SIRET': '15321' }
-            ];";
+            //Faire appel a une API
+            Annuaire annuaire = new Annuaire();
+            return annuaire.GetAll();
+
         }
     }
 }

@@ -19,14 +19,12 @@ export class Recherche extends Component {
         this.setState({ NomEntreprise: event.target.value });
     }
 
-    rechercher(event) {        
-        this.setState({
-            items: [
-                { "id": 1, "Nom": "Apples", "SIRET": "1235132" },
-                { "id": 2, "Nom": "Peaches", "SIRET": "15321" }
-            ]
-        });
-        console.log(this.state.items)
+    rechercher(event) {     
+        fetch('api/Entreprise/GetEntreprise')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ items: data, loading: false });
+            });        
 
         event.preventDefault();
     }
@@ -37,7 +35,7 @@ export class Recherche extends Component {
             resultat = <div>
                 <p>resultat de recherche</p>
                 <ul>                    
-                    {this.state.items.map(i => <EntrepriseListItem e={i} />)}
+                    {this.state.items.map(i => <EntrepriseListItem key={i.siret} e={i} />)}
                 </ul>
             </div>
         }
