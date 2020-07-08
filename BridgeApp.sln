@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridges.Core", "Bridges.Cor
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Bridges.Database", "Bridges.Database\Bridges.Database.sqlproj", "{0981E841-C92A-49B1-8DA5-136DDAB0B661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridges.API", "Bridges.API\Bridges.API.csproj", "{3A21BA97-7268-411C-8D62-68AED00DA5D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridges.API", "Bridges.API\Bridges.API.csproj", "{3A21BA97-7268-411C-8D62-68AED00DA5D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridges.Interfaces", "Bridges.Interfaces\Bridges.Interfaces.csproj", "{68F9FFB4-4D12-4F07-9F75-510ACFB42709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{3A21BA97-7268-411C-8D62-68AED00DA5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A21BA97-7268-411C-8D62-68AED00DA5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A21BA97-7268-411C-8D62-68AED00DA5D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F9FFB4-4D12-4F07-9F75-510ACFB42709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F9FFB4-4D12-4F07-9F75-510ACFB42709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F9FFB4-4D12-4F07-9F75-510ACFB42709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F9FFB4-4D12-4F07-9F75-510ACFB42709}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

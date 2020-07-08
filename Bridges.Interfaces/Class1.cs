@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bridges.Services
+namespace Bridges.Interfaces
 {
     public class Class1
     {

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using BridgeCore.Entreprise;
-using Bridges.Services;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -19,7 +18,9 @@ namespace BridgeFront.Controllers
         {            
             var client = new HttpClient();
             IEnumerable<Entreprise> entreprises = null;
-            HttpResponseMessage response = await client.GetAsync("https://localhost:44378/api/Entreprise/GetEntreprise");
+
+            client.BaseAddress = new Uri("https://localhost:44378/");
+            HttpResponseMessage response = await client.GetAsync("api/Entreprise/GetEntreprise");
             if (response.IsSuccessStatusCode)
             {
                 entreprises = await response.Content.ReadAsAsync<IEnumerable<Entreprise>>();
