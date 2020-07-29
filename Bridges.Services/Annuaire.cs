@@ -1,7 +1,5 @@
 ﻿using BridgeCore.Entreprise;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Bridges.Services
 {
@@ -25,7 +23,6 @@ namespace Bridges.Services
 
             return enterpriseRepository.GetAll();
 
-            
         }
     }
 }

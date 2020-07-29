@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bridges.Interfaces
+namespace Bridges.Infra.DAL_SQL
 {
     public class Class1
     {
