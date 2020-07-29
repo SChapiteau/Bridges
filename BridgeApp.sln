@@ -13,7 +13,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Bridges.Database", "Bridges
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridges.API", "Bridges.API\Bridges.API.csproj", "{3A21BA97-7268-411C-8D62-68AED00DA5D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridges.Interfaces", "Bridges.Interfaces\Bridges.Interfaces.csproj", "{68F9FFB4-4D12-4F07-9F75-510ACFB42709}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridges.Infrastructure", "Bridges.Interfaces\Bridges.Infrastructure.csproj", "{68F9FFB4-4D12-4F07-9F75-510ACFB42709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
