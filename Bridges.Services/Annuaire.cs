@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridges.Services
 {
-    public class Annuaire
+    public class Annuaire : IAnnuaire
     {
         private readonly IEntrepriseRepository enterpriseRepository;
 
@@ -11,15 +11,8 @@ namespace Bridges.Services
         {
             this.enterpriseRepository = enterpriseRepository;
         }
-       public IEnumerable<Entreprise> GetAll()
+        public IEnumerable<Entreprise> GetAll()
         {
-            //IEnumerable<Entreprise> result = new List<Entreprise>
-            //{
-            //    new Entreprise{SIRET = "123", Nom="Entreprise 1"},
-            //    new Entreprise{SIRET = "222", Nom="Entreprise 2"},
-            //    new Entreprise{SIRET = "333", Nom="Entreprise 3"}
-            //};
-            //return result;
 
             return enterpriseRepository.GetAll();
 
