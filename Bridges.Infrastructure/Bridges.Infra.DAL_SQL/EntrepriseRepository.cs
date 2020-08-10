@@ -13,10 +13,9 @@ namespace Bridges.Infra.DAL_SQL
     {
         public IEnumerable<Entreprise> GetAll()
         {
-            string connectionString = @"Data Source=STEPHANE-VIVIBO\sqlexpress;Initial Catalog=Bridges;Persist Security Info=True;User ID=Bridges;Password=bridges";
-            //string connectionString = ConfigurationManager.ConnectionStrings["CustomerConnection"].ConnectionString)
+            
 
-            using (IDbConnection db = new SqlConnection(connectionString))
+            using (IDbConnection db = ConnectionManager.GetConnection())
             {
                 return db.Query<Entreprise>("Select * From Entreprise").ToList();
             }
