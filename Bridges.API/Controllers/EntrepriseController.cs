@@ -24,8 +24,6 @@ namespace BridgeFront.Controllers
         [Route("GetEntreprise")]
         public IEnumerable<Entreprise> GetEntreprise()
         {
-            //Faire appel a une API
-            //Annuaire annuaire = new Annuaire(new EntrepriseSQLRepository()); // faire l'injection de depéndance
             return this.annuaire.GetAll();
         }
     }
