@@ -22,10 +22,8 @@ namespace Bridges.Infra.DAL_SQL
             get {
                 if (_currentConnection == null)
                 {
-                    var connectionString = _configuration["ConnectionString"];
-                    //string connectionStringVIVO = @"Data Source=STEPHANE-VIVIBO\sqlexpress;Initial Catalog=Bridges;Persist Security Info=True;User ID=Bridges;Password=bridges";
-                    string connectionStringDeskto = @"Data Source=STEPHANE-DESKTO\SQLEXPRESS;Initial Catalog=Bridges;Persist Security Info=True;User ID=Bridges;Password=bridges";
-                    //string connectionString = ConfigurationManager.ConnectionStrings["CustomerConnection"].ConnectionString)
+                    var connectionString = _configuration["ConnectionString"];                 
+                  
                     _currentConnection = new SqlConnection(connectionString);
                 }
                 return _currentConnection;
